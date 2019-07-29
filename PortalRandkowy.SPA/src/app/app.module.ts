@@ -5,8 +5,8 @@ import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { ValueComponent } from './value/value.component';
-import { HttpClient } from 'selenium-webdriver/http';
 import { NavComponent } from './nav/nav.component';
+import { AuthService } from './_services/auth.service';
 
 
 @NgModule({
@@ -20,7 +20,9 @@ import { NavComponent } from './nav/nav.component';
       HttpClientModule,
       FormsModule
    ],
-   providers: [],
+   providers: [
+      AuthService
+   ],
    bootstrap: [
       AppComponent
    ]

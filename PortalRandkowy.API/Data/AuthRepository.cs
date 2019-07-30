@@ -34,7 +34,6 @@ namespace PortalRandkowy.API.Data
         public async Task<User> Register(User user, string password)
         {
             byte[] passwordHash, passwordSalt;
-
             CreatePasswordHashSalt(password, out passwordHash, out passwordSalt);
 
             user.PasswordHash = passwordHash;

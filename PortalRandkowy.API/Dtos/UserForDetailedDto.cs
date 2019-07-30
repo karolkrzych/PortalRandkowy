@@ -56,7 +56,7 @@ namespace PortalRandkowy.API.Dtos
 
         // Zakładka Zdjęcia
 
-        public ICollection<Photo> Photos { get; set; }
+        public ICollection<PhotosForDetailedDto> Photos { get; set; }
         public string PhotoUrl { get; set; }
     }
 }

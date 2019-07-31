@@ -45,7 +45,7 @@ export function tokenGetter() {
             blacklistedRoutes: ['localhost:5000/api/auth']
          }
       }),
-      RouterModule.forRoot(appRoutes);
+      RouterModule.forRoot(appRoutes)
    ],
    providers: [
       AuthService,

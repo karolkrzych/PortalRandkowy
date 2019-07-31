@@ -47,12 +47,12 @@ namespace PortalRandkowy.API
             services.AddScoped<IGenericRepository, GenericRepository>();
             services.AddScoped<IUserRepository, UserRepository>();
             services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
-                        .AddJwtBearer(options => {
+                        .AddJwtBearer(options =>{
                             options.TokenValidationParameters = new TokenValidationParameters
                             {
                                 ValidateIssuerSigningKey = true,
                                 IssuerSigningKey = new SymmetricSecurityKey(Encoding.ASCII.GetBytes(Configuration.GetSection("AppSettings:Token").Value)),
-                                ValidateIssuer = false, 
+                                ValidateIssuer = false,
                                 ValidateAudience = false
                             };
                         });
@@ -65,15 +65,17 @@ namespace PortalRandkowy.API
             {
                 app.UseDeveloperExceptionPage();
             }
-            else 
+            else
             {
-                app.UseExceptionHandler(builder =>{
-                    builder.Run(async context => {
+                app.UseExceptionHandler(builder => 
+                {
+                    builder.Run(async context => 
+                    {
                         context.Response.StatusCode = (int)HttpStatusCode.InternalServerError;
 
                         var error = context.Features.Get<IExceptionHandlerFeature>();
 
-                        if(error != null)
+                        if (error != null)
                         {
                             context.Response.AddApplicationError(error.Error.Message);
                             await context.Response.WriteAsync(error.Error.Message);
@@ -81,7 +83,7 @@ namespace PortalRandkowy.API
                     });
                 });
             }
-            
+
             seeder.SeedUsers();
             app.UseCors(x => x.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod());
             app.UseAuthentication();

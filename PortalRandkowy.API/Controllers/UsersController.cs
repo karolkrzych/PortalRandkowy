@@ -16,24 +16,23 @@ namespace PortalRandkowy.API.Controllers
     {
         private readonly IUserRepository _repo;
         private readonly IMapper _mapper;
+
         public UsersController(IUserRepository repo, IMapper mapper)
-        {       
+        {
             _repo = repo;
             _mapper = mapper;
         }
 
         [HttpGet]
         public async Task<IActionResult> GetUsers()
-        {   
-          
-            throw new Exception("Generujemy recznie błąd");
+        {         
+            throw new Exception("Generujemy recznie blad");
 
             var users = await _repo.GetUsers();
 
             var usersToReturn = _mapper.Map<IEnumerable<UserForListDto>>(users);
 
             return Ok(usersToReturn);
-
         }
 
         [HttpGet("{id}")]
@@ -45,6 +44,5 @@ namespace PortalRandkowy.API.Controllers
 
             return Ok(userToReturn);
         }
-
     }
 }

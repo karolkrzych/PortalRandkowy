@@ -4,6 +4,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { JwtModule } from '@auth0/angular-jwt';
 import { RouterModule } from '@angular/router';
+import { BsDropdownModule } from 'ngx-bootstrap';
 
 import { AppComponent } from './app.component';
 import { NavComponent } from './nav/nav.component';
@@ -46,7 +47,8 @@ export function tokenGetter() {
             blacklistedRoutes: ['localhost:5000/api/auth']
          }
       }),
-      RouterModule.forRoot(appRoutes)
+      RouterModule.forRoot(appRoutes),
+      BsDropdownModule.forRoot()
    ],
    providers: [
       AuthService,

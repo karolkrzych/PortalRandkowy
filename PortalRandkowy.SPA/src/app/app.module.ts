@@ -47,8 +47,7 @@ export function tokenGetter() {
    imports: [
       BrowserModule,
       HttpClientModule,
-     NgxGalleryModule,
-      
+      NgxGalleryModule,
       FormsModule,
       JwtModule.forRoot({
          config: {

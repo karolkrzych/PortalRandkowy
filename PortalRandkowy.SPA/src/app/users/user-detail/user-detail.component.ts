@@ -17,8 +17,8 @@ export class UserDetailComponent implements OnInit {
   galleryImages: NgxGalleryImage[];
 
   constructor(private userService: UserService,
-    private alertify: AlertifyService,
-    private route: ActivatedRoute) { }
+              private alertify: AlertifyService,
+              private route: ActivatedRoute) { }
 
   ngOnInit() {
     this.route.data.subscribe(data => {
@@ -27,8 +27,8 @@ export class UserDetailComponent implements OnInit {
 
     this.galleryOptions = [
       {
-        width: '600px',
-        height: '400px',
+        width: '500px',
+        height: '500px',
         thumbnailsColumns: 4,
         imagePercent: 100,
         preview: false,

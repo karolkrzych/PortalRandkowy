@@ -35,15 +35,15 @@
     </div>
     <div class="col-sm-8">
       <div class="tab-panel">
-        <tabset>
-          <tab heading="Informacje o {{user?.username}}">
-            <table style="width: 100%">
+        <tabset class="user-tabset">
+          <tab heading="Informacje">
+            <table class="user-table">
               <tr>
-                <td style="width: 50%">
+                <td class="user-table-td">
                   <h5>Wzrost</h5>
                   <p>{{user?.height}}</p>
                 </td>
-                <td style="width: 50%">
+                <td class="user-table-td">
                   <h5>Stan cywilny</h5>
                   <p>{{user?.martialStatus}}</p>
                 </td>

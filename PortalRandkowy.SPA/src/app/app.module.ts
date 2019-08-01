@@ -47,6 +47,8 @@ export function tokenGetter() {
    imports: [
       BrowserModule,
       HttpClientModule,
+     NgxGalleryModule,
+      
       FormsModule,
       JwtModule.forRoot({
          config: {
@@ -58,7 +60,6 @@ export function tokenGetter() {
       RouterModule.forRoot(appRoutes),
       BsDropdownModule.forRoot(),
       TabsModule.forRoot(),
-      NgxGalleryModule
    ],
    providers: [
       AuthService,

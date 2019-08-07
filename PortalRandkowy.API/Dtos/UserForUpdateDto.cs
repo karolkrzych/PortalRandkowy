@@ -2,42 +2,40 @@ namespace PortalRandkowy.API.Dtos
 {
     public class UserForUpdateDto
     {
+
         // Zakładka Info
-
-        public string Height { get; set; }
-        public string EyeColor { get; set; }
-        public string HairColour { get; set; }
-        public string MartialStatus { get; set; }
-        public string Education { get; set; }
-        public string Profession { get; set; }
-        public string Children { get; set; }
-        public string Languages { get; set; }
-        public string City { get; set; }
-        public string Country { get; set; }
-
-        // Zakładka O mnie
-
-        public string Motto { get; set; }
-        public string Description { get; set; }
-        public string Personality { get; set; }
-        public string LookingFor { get; set; }
+        public string Height { get; set; }          // Wygląd - wzrost
+        public string EyeColor { get; set; }        // Wygląd - kolor oczu
+        public string HairColour { get; set; }       // Wygląd - kolor włosów
+        public string MartialStatus { get; set; }   // Formalne - stan cywilny
+        public string Education { get; set; }       // Formalne - wykształcenie
+        public string Profession { get; set; }      // Formalne - zawód
+        public string Children { get; set; }        // Dzieci
+        public string Languages { get; set; }       // Języki obce
+        public string City { get; set; }            // Miasto
+        public string Country { get; set; }         // Kraj
 
 
-        // Zakładka Pasje, zainteresowania
+        // Zakłada  O mnie
+        public string Motto { get; set; }           // Motto życiowe
+        public string Description { get; set; }     // Opis
+        public string Personality { get; set; }     // Osonowość
+        public string LookingFor { get; set; }      // Szukam
 
-        public string Interests { get; set; }
-        public string FreeTime { get; set; }
-        public string Sport { get; set; }
-        public string Movies { get; set; }
-        public string Music { get; set; }
+
+        // Zakłaka Pasje, zaiteresowania
+        public string Interests { get; set; }       // Zainteresowania
+        public string FreeTime { get; set; }        // Czas wolny
+        public string Sport { get; set; }           // Sport
+        public string Movies { get; set; }          // Filmy
+        public string Music { get; set; }           // Muzyka
+
 
         // Zakładka Preferencje
-
-        public string ILike { get; set; }
-        public string IdoNotLike { get; set; }
-        public string MakesMeLaugh { get; set; }
-        public string ItFeelsBestIn { get; set; }
-        public string FriendsWouldDescribeMe { get; set; }
-
+        public string ILike { get; set; }           // Lubię
+        public string IdoNotLike { get; set; }      // Nie lubię
+        public string MakesMeLaugh { get; set; }    // Rozśmiesza mnie
+        public string ItFeelsBestIn { get; set; }   //Najlepiej czuję się w
+        public string FriendsWouldDescribeMe { get; set; }  // Przyjaciele opisali by mnie
     }
 }

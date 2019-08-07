@@ -44,7 +44,7 @@ namespace PortalRandkowy.API.Controllers
             return Ok(userToReturn);
         }
 
-        [HttpPut("id")]
+        [HttpPut("{id}")]
         public async Task<IActionResult> UpdateUser(int id, UserForUpdateDto userForUpdateDto)
         {
             if (id != int.Parse(User.FindFirst(ClaimTypes.NameIdentifier).Value))
@@ -54,10 +54,10 @@ namespace PortalRandkowy.API.Controllers
 
             _mapper.Map(userForUpdateDto, userFromRepo);
 
-            if(await _repo.SaveAll())
+           if (await _repo.SaveAll())
                 return NoContent();
 
-            throw new Exception($"Aktualizacja użytkownika o id: {id} nie powiodła się przy zapisywaniu do bazy");        
-        } 
+            throw new Exception($"Aktualizacja użytkownika o id: {id} nie powiodła sie przy zapisywaniu do bazy");
+        }
     }
 }

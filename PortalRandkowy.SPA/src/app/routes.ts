@@ -19,7 +19,7 @@ export const appRoutes: Routes = [
      children: [
         { path: 'uzytkownicy', component: UserListComponent, resolve: {users: UserListResolver}},
         { path: 'uzytkownicy/:id', component: UserDetailComponent, resolve: {user: UserDetailResolver}},
-        { path: 'uzytkownik/edycja', component: UserEditComponent, 
+        { path: 'uzytkownik/edycja', component: UserEditComponent,
                                      resolve: {user: UserEditResolver},
                                      canDeactivate: [PreventUnsavedChanges]},
         { path: 'polubienia', component: LikesComponent},

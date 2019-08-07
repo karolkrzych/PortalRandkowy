@@ -1,0 +1,14 @@
+img.img-thumbnail {
+    height: 100px;
+    min-width: 100px !important;
+    margin-bottom: 2px;
+}
+
+.btn btn-sm btn-info mr-1:hover {
+    border: 1px solid #888;
+    background-color: #ddd;
+}
+.btn btn-sm btn-danger:hover {
+    border: 1px solid #888;
+    background-color: #ddd;
+}
